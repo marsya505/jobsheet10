@@ -9,8 +9,9 @@ public class Cinema11 {
         audience[2][1] = "Farhan";
         audience[3][0] = "Gisel";
         audience[3][1] = "Hana";
-        for (String[] rowAudience : audience) {
-            System.out.println("Length of row " + rowAudience.length);
+        System.out.println("Audiences in the row 3: ");
+        for (int i = 0; i < audience[2].length; i++) {
+            System.out.println(audience[2][i]);
         }
     }   
 }
