@@ -8,11 +8,25 @@ public class CinemaWithScanner11 {
         while (true) {
             System.out.print("Enter a name: ");
             name = input11.nextLine();
+        while (true) {
             System.out.print("Enter row number: ");
             row = input11.nextInt();
+            if (row < 1 || row > 4) {
+                System.out.println("Invalid row number.");
+            } else {
+                break; 
+            }
+        }
+        while (true) {
             System.out.print("Enter column number: ");
             column = input11.nextInt();
             input11.nextLine();
+            if (column < 1 || column > 2) {
+                System.out.println("Invalid column number.");
+            } else {
+                break; 
+            }
+        }
             audience[row - 1][column - 1] = name;
             System.out.print("Are there any other audience to be added? (y/n): ");
             next = input11.nextLine();
