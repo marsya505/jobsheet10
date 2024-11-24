@@ -2,12 +2,14 @@ import java.util.Scanner;
 public class CinemaWithScanner11 {
     public static void main(String[] args) {
         Scanner input11 = new Scanner(System.in);
-        int row, column;
+        int row = 0, column = 0;
         String name, next;
         String[][] audience = new String[4][2];
         while (true) {
             System.out.print("Enter a name: ");
             name = input11.nextLine();
+        boolean validSeat = false;
+        while (!validSeat) {
         while (true) {
             System.out.print("Enter row number: ");
             row = input11.nextInt();
@@ -25,6 +27,12 @@ public class CinemaWithScanner11 {
                 System.out.println("Invalid column number.");
             } else {
                 break; 
+            }
+        }
+        if (audience[row - 1][column - 1] != null) {
+            System.out.println("Seat at Row " + row + "and Column " + column + " is already occupied.");
+        } else {
+            validSeat = true;
             }
         }
             audience[row - 1][column - 1] = name;
