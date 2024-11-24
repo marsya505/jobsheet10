@@ -13,14 +13,24 @@ public class CinemaWithScanner11 {
             System.out.print("Enter column number: ");
             column = input11.nextInt();
             input11.nextLine();
-
             audience[row - 1][column - 1] = name;
             System.out.print("Are there any other audience to be added? (y/n): ");
             next = input11.nextLine();
-
             if (next.equalsIgnoreCase("n")) {
                 break;
             }
+        }
+        System.out.println("Column      1      2");
+        for (int i = 0; i < audience.length; i++) {
+            System.out.print("Row " + (i + 1) + "     ");
+            for (int j = 0; j < audience[i].length; j++) {
+                if (audience[i][j] != null) {
+                    System.out.print(audience[i][j] + "   ");
+                } else {
+                    System.out.print("Empty  ");
+                }
+            }
+            System.out.println();
         }
     }
 }
