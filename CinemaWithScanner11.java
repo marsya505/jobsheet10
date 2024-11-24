@@ -47,9 +47,9 @@ public class CinemaWithScanner11 {
             System.out.print("Row " + (i + 1) + "     ");
             for (int j = 0; j < audience[i].length; j++) {
                 if (audience[i][j] != null) {
-                    System.out.print(audience[i][j] + "   ");
+                    System.out.print(audience[i][j] + "     ");
                 } else {
-                    System.out.print("Empty  ");
+                    System.out.print("***      ");
                 }
             }
             System.out.println();
